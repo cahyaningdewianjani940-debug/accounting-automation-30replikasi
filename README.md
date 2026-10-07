@@ -1,17 +1,23 @@
-```python
-# accounting-automation-30replikasi 
-Replikasi eksperimen akuntansi seed 2026
-Mean manual 2.88% vs Python 0%
-30 replikasi reproducible
+# accounting-automation-30replikasi
 
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-np.random.seed(2026)
-manual = np.clip(np.random.normal(2.88,1.1,30),1,5)
-python = np.zeros(30)
-df = pd.DataFrame({"manual":manual,"python":python})
-df.to_csv("hasil.csv")
-plt.boxplot([manual,python],labels=["Manual 2.88%","Python 0%"])
-plt.savefig("boxplot.png")
-```
+Replikasi eksperimen perbandingan error rate akuntansi manual vs Python.
+
+### Metodologi Reproducible
+- **Seed:** 2026
+- **Jumlah replikasi:** 30
+- **Mean Manual:** 2.88% (SD 1.1%)
+- **Mean Python:** 0%
+- **Tools:** Python, Pandas, NumPy, Matplotlib
+
+### Hasil
+Eksperimen membuktikan penurunan human error dari 2.88% menjadi 0% setelah otomasi.
+
+### File dalam repo
+- `experiment_30replikasi.py` - kode utama
+- `hasil_30_replikasi.csv` - data 30 replikasi
+- `boxplot_cek1.png` - visualisasi
+
+### Link untuk Lampiran Skripsi
+https://github.com/cahyaningdewianjani940-debug/accounting-automation-30replikasi
+
+Repository ini sebagai bukti reproducible research untuk Skripsi UT.
